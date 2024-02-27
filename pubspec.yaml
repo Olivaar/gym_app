@@ -1,0 +1,44 @@
+name: gym_app
+description: A new Flutter project.
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.5 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/navigationBar/batimento-cardiaco.png
+    - assets/images/navigationBar/do-utilizador.png
+    - assets/images/navigationBar/ginasio.png
+    - assets/images/navigationBar/silhueta-de-icone-de-casa.png
+    - assets/images/navigationBar/trofeu.png
+    - assets/images/icons/facebook.png
+    - assets/images/icons/gmail.png
+    - assets/images/logos/logo_red_bg_red.png
+    - assets/images/logos/logo_red_bg_red.png
+    - assets/images/logos/logo_red_bg_red.png
+    - assets/images/logos/logo_white_bg_transparent.png
+    - assets/images/logos/logo_white_br_transparent_full.png
+
+  fonts:
+    - family: Impact
+      fonts:
+        - asset: assets/fonts/impact.ttf
