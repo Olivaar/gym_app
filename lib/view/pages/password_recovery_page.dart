@@ -1,26 +1,26 @@
 import 'package:flutter/material.dart';
-import '../../../utils/theme_helper.dart';
-import '../../widgets/app_bar_ga.dart';
+import '../../utils/app_routs.dart';
+import '../../utils/theme_helper.dart';
 
-class AboutTheAppPage extends StatelessWidget {
-  const AboutTheAppPage({super.key});
+class PasswordRecoveryPage extends StatelessWidget {
+  const PasswordRecoveryPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const AppBarGa(
-        automaticallyImplyLeading: true,
-      ),
       body: Container(
+        width: double.maxFinite,
+        height: double.maxFinite,
         decoration: ThemeHelper().boxDecorationGradient(context),
         child: Stack(
           children: [
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   const SizedBox(
-                    height: 50,
+                    height: 100,
                   ),
                   Image.asset(
                     'assets/images/logos/logo_white_br_transparent_full.png',
@@ -28,47 +28,46 @@ class AboutTheAppPage extends StatelessWidget {
                     height: 120,
                   ),
                   const SizedBox(
-                    height: 130,
+                    height: 150,
                   ),
-                  ElevatedButton(
-                    onPressed: () {},
-                    style: ThemeHelper().buttonStyle(),
-                    child: Text(
-                      'SOBRE O APP',
-                      style: ThemeHelper().textStyleButton(),
+                  const Text(
+                    'RECUPERAR SENHA:',
+                    style: TextStyle(
+                      fontFamily: 'Impact',
+                      fontSize: 25,
+                      color: Colors.white,
                     ),
+                    textAlign: TextAlign.center,
                   ),
                   const SizedBox(
                     height: 5,
                   ),
-                  ElevatedButton(
-                    onPressed: () {},
-                    style: ThemeHelper().buttonStyle(),
-                    child: Text(
-                      'REWARDS',
-                      style: ThemeHelper().textStyleButton(),
+                  TextFormField(
+                    decoration: ThemeHelper().textInputDecoration(
+                      labelText: 'Informe o e-mail cadastrado',
+                      hintText: 'E-mail cadastrado...',
                     ),
                   ),
                   const SizedBox(
-                    height: 5,
+                    height: 15,
                   ),
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).pushNamed(AppRouts.REDEFINE_PASSWORD_PAGE);
+                    },
                     style: ThemeHelper().buttonStyle(),
                     child: Text(
-                      'NOTAS DE ATUALIZAÇÃO',
-                      style: ThemeHelper().textStyleButton(),
+                      'Enviar e-mail',
+                        style: ThemeHelper().textStyleButton(),
                     ),
                   ),
-                  const SizedBox(
-                    height: 5,
-                  ),
-                  ElevatedButton(
-                    onPressed: () {},
-                    style: ThemeHelper().buttonStyle(),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).pop();
+                    },
                     child: Text(
-                      'TWT SOFTWARE',
-                      style: ThemeHelper().textStyleButton(),
+                      'Lembrei minha senha',
+                      style: ThemeHelper().textStyleUnderline(),
                     ),
                   ),
                 ],
@@ -82,7 +81,7 @@ class AboutTheAppPage extends StatelessWidget {
               ),
             ),
           ],
-        )
+        ),
       ),
     );
   }

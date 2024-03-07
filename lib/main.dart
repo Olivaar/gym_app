@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:gym_app/utils/app_routs.dart';
-import 'package:gym_app/view/pages/login_pages/login_page.dart';
-import 'package:gym_app/view/pages/login_pages/password_recovery_page.dart';
-import 'package:gym_app/view/pages/login_pages/redefine_password_page.dart';
-import 'package:gym_app/view/pages/login_pages/register_page.dart';
+import 'package:gym_app/view/pages/login_page.dart';
+import 'package:gym_app/view/pages/password_recovery_page.dart';
+import 'package:gym_app/view/pages/redefine_password_page.dart';
 import 'package:gym_app/view/pages/main_page.dart';
-import 'package:gym_app/view/pages/settings_pages/about_the_app_page.dart';
-import 'package:gym_app/view/pages/settings_pages/settings_page.dart';
+import 'package:gym_app/view/pages/about_the_app_page.dart';
+import 'package:gym_app/view/pages/register_page.dart';
+import 'package:gym_app/view/pages/settings_page.dart';
 
 void main() {
   runApp(const MyApp());

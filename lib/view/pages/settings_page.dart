@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../utils/theme_helper.dart';
-import '../../widgets/app_bar_ga.dart';
+import '../widgets/app_bar_ga.dart';
 
 class SettingsPage extends StatelessWidget {
   const SettingsPage({super.key});

@@ -1,26 +1,26 @@
 import 'package:flutter/material.dart';
-import '../../../utils/app_routs.dart';
-import '../../../utils/theme_helper.dart';
+import '../../utils/theme_helper.dart';
+import '../widgets/app_bar_ga.dart';
 
-class PasswordRecoveryPage extends StatelessWidget {
-  const PasswordRecoveryPage({super.key});
+class AboutTheAppPage extends StatelessWidget {
+  const AboutTheAppPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: const AppBarGa(
+        automaticallyImplyLeading: true,
+      ),
       body: Container(
-        width: double.maxFinite,
-        height: double.maxFinite,
         decoration: ThemeHelper().boxDecorationGradient(context),
         child: Stack(
           children: [
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   const SizedBox(
-                    height: 100,
+                    height: 50,
                   ),
                   Image.asset(
                     'assets/images/logos/logo_white_br_transparent_full.png',
@@ -28,46 +28,47 @@ class PasswordRecoveryPage extends StatelessWidget {
                     height: 120,
                   ),
                   const SizedBox(
-                    height: 150,
+                    height: 130,
                   ),
-                  const Text(
-                    'RECUPERAR SENHA:',
-                    style: TextStyle(
-                      fontFamily: 'Impact',
-                      fontSize: 25,
-                      color: Colors.white,
+                  ElevatedButton(
+                    onPressed: () {},
+                    style: ThemeHelper().buttonStyle(),
+                    child: Text(
+                      'SOBRE O APP',
+                      style: ThemeHelper().textStyleButton(),
                     ),
-                    textAlign: TextAlign.center,
                   ),
                   const SizedBox(
                     height: 5,
                   ),
-                  TextFormField(
-                    decoration: ThemeHelper().textInputDecoration(
-                      labelText: 'Informe o e-mail cadastrado',
-                      hintText: 'E-mail cadastrado...',
+                  ElevatedButton(
+                    onPressed: () {},
+                    style: ThemeHelper().buttonStyle(),
+                    child: Text(
+                      'REWARDS',
+                      style: ThemeHelper().textStyleButton(),
                     ),
                   ),
                   const SizedBox(
-                    height: 15,
+                    height: 5,
                   ),
                   ElevatedButton(
-                    onPressed: () {
-                      Navigator.of(context).pushNamed(AppRouts.REDEFINE_PASSWORD_PAGE);
-                    },
+                    onPressed: () {},
                     style: ThemeHelper().buttonStyle(),
                     child: Text(
-                      'Enviar e-mail',
-                        style: ThemeHelper().textStyleButton(),
+                      'NOTAS DE ATUALIZAÇÃO',
+                      style: ThemeHelper().textStyleButton(),
                     ),
                   ),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.of(context).pop();
-                    },
+                  const SizedBox(
+                    height: 5,
+                  ),
+                  ElevatedButton(
+                    onPressed: () {},
+                    style: ThemeHelper().buttonStyle(),
                     child: Text(
-                      'Lembrei minha senha',
-                      style: ThemeHelper().textStyleUnderline(),
+                      'TWT SOFTWARE',
+                      style: ThemeHelper().textStyleButton(),
                     ),
                   ),
                 ],
@@ -81,7 +82,7 @@ class PasswordRecoveryPage extends StatelessWidget {
               ),
             ),
           ],
-        ),
+        )
       ),
     );
   }
