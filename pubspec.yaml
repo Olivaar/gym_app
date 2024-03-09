@@ -13,6 +13,7 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^1.0.2
+  carousel_slider: ^4.2.1
 
 dev_dependencies:
   flutter_test:
@@ -37,6 +38,9 @@ flutter:
     - assets/images/logos/logo_red_bg_red.png
     - assets/images/logos/logo_white_bg_transparent.png
     - assets/images/logos/logo_white_br_transparent_full.png
+    - assets/images/carousel/image_carousel.png
+    - assets/images/carousel/twt_carousel.png
+    - assets/images/icons/relogio.png
 
   fonts:
     - family: Impact

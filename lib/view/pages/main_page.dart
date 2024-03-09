@@ -5,7 +5,6 @@ import 'package:gym_app/view/pages/profile_page.dart';
 import 'package:gym_app/view/pages/rewards_page.dart';
 import 'package:gym_app/view/pages/workouts_page.dart';
 import '../widgets/app_bar_ga.dart';
-import '../widgets/navigation_bar_ga.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -54,7 +53,7 @@ class _MainPageState extends State<MainPage> {
       body: _pages[_selectedPageIndex]['page'] as Widget,
       bottomNavigationBar: NavigationBar(
         selectedIndex: _selectedPageIndex,
-        backgroundColor: Theme.of(context).primaryColor,
+        backgroundColor: Colors.red,
         onDestinationSelected: _selectPage,
         destinations: [
           NavigationDestination(

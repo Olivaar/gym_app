@@ -73,4 +73,23 @@ class ThemeHelper {
       color: Colors.black,
     );
   }
+
+  TextStyle textStyleStandard(){
+    return const TextStyle(
+      color: Colors.white,
+      fontFamily: 'impact',
+      fontSize: 16
+    );
+  }
+
+  LinearGradient linearGradient(){
+    return const LinearGradient(
+      colors: [
+        Color(0xff3a1515),
+        Colors.red,
+      ],
+      begin: Alignment.topCenter,
+      end: Alignment.bottomCenter,
+    );
+  }
 }
