@@ -3,19 +3,23 @@ import 'package:flutter/material.dart';
 import '../../utils/theme_helper.dart';
 
 class CardKcal extends StatelessWidget {
-  const CardKcal({super.key});
+  const
+  CardKcal({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(20),
-      margin: const EdgeInsets.symmetric(horizontal: 20),
+      margin: const EdgeInsets.symmetric(horizontal: 10),
       decoration: BoxDecoration(
         gradient: ThemeHelper().linearGradient(),
         borderRadius: BorderRadius.circular(10),
       ),
       child: Column(
         children: [
+          const SizedBox(
+            height: 10,
+          ),
           Text(
             'Kcal',
             style: ThemeHelper().textStyleStandard(),
@@ -25,28 +29,34 @@ class CardKcal extends StatelessWidget {
           ),
           Row(
             crossAxisAlignment: CrossAxisAlignment.end,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Expanded(
                 child: Container(
                   height: 100,
                   width: 100,
                   alignment: Alignment.bottomLeft,
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Text(
-                        '200',
-                        style: ThemeHelper().textStyleStandard(),
-                      ),
-                      Text(
-                        'CONSUMIDAS',
-                        style: ThemeHelper().textStyleStandard(),
-                      ),
-                    ],
+                  child: Align(
+                    alignment: Alignment.bottomLeft,
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Text(
+                          '200',
+                          style: ThemeHelper().textStyleStandard(),
+                        ),
+                        Text(
+                          'CONSUMIDAS',
+                          style: ThemeHelper().textStyleStandard(fontSize: 8),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
+              const Spacer(),
               Expanded(
+                flex: 2,
                 child: Stack(
                   children: [
                     SizedBox(
@@ -83,6 +93,7 @@ class CardKcal extends StatelessWidget {
                   ],
                 ),
               ),
+              const Spacer(),
               Expanded(
                 child: SizedBox(
                   height: 100,
@@ -98,7 +109,7 @@ class CardKcal extends StatelessWidget {
                         ),
                         Text(
                           'GASTAS',
-                          style: ThemeHelper().textStyleStandard(),
+                          style: ThemeHelper().textStyleStandard(fontSize: 8),
                         ),
                       ],
                     ),

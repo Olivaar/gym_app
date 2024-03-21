@@ -12,43 +12,34 @@ class HealthPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
-      child: const Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          Text(
+          const SizedBox(
+            height: 10,
+          ),
+          const Text(
             'Minha Saúde',
             style: TextStyle(
               fontSize: 28,
               fontFamily: 'impact',
             ),
           ),
-          SizedBox(
-            height: 20,
-          ),
-          CardKcal(),
-          SizedBox(
-            height: 10,
-          ),
+          const CardKcal(),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                CardSteps(),
-                CardHeartbeat(),
-              ],
-            ),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
+            padding: const EdgeInsets.all(10),
+            child: GridView(
+              shrinkWrap: true,
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                mainAxisSpacing: 10,
+                crossAxisSpacing: 10,
+              ),
+              children: const [
                 CardActiveTime(),
                 CardImc(),
+                CardSteps(),
+                CardHeartbeat(),
               ],
             ),
           ),

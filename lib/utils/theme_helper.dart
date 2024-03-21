@@ -74,11 +74,11 @@ class ThemeHelper {
     );
   }
 
-  TextStyle textStyleStandard(){
-    return const TextStyle(
-      color: Colors.white,
+  TextStyle textStyleStandard({double? fontSize, Color? textColor}){
+    return TextStyle(
+      color: textColor ?? Colors.white,
       fontFamily: 'impact',
-      fontSize: 16
+      fontSize: fontSize ?? 16
     );
   }
 

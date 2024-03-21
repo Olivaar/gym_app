@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../../utils/theme_helper.dart';
 
 class CardHeartbeat extends StatelessWidget {
